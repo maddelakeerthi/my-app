@@ -1,0 +1,8 @@
+.parent{
+    background-color: aqua;
+    position: relative;
+    height: 400px;
+    width: 300px;
+    left: 50%;
+    margin-right: 400px;
+}

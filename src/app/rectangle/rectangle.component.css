@@ -1,0 +1,14 @@
+.parent{
+    position: relative;
+    left: 40%;
+    background-color: brown;
+    margin-right: 50%;
+    height: 250px;
+    top: 200px;
+}
+#heading{
+    text-align: center;
+}
+form{
+padding-left: 30px;
+}

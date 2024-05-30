@@ -1,0 +1,19 @@
+<div class="parent">
+    <div class="child"></div>
+    <h1>body mass index(BMI) calculator</h1>
+    <br>
+    <label for="">height</label>
+    <input type="number" [(ngModel)]="height">
+    <button>cm</button>
+    <br>
+    <label for="">weight</label>
+    <input type="number" [(ngModel)]="weight">
+    <button>kg</button>
+    <br>
+
+    <button (click)="calculate()">calculate</button>
+    <br>
+    <h1 result is>{{result}}</h1>
+    <h1>{{check}}</h1>
+    
+</div>

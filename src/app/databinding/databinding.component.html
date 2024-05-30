@@ -1,0 +1,21 @@
+<p>databinding works!</p>
+<div class="parent">
+<!--Interpolation-->
+<h3>my age is{{age}}</h3>
+<h3>my name id=s {{name}}</h3>
+<h3>is indian:{{isValid}}</h3>
+
+<!--Property Binding-->
+<button [disabled]="isValid">Submit</button>
+
+<!--Event Binding-->
+<button (click)="upload()">upload</button>
+<button (click)="send()">send</button>
+
+<input type="text" (keyup)="change()">
+
+<!--Two way data binding-->
+<input type="text" [(ngModel)]="phone">
+<p>{{phone}}</p></div>
+
+
