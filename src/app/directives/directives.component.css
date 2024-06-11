@@ -1,0 +1,13 @@
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color:green;
+}
+.parent{
+    position: relative;
+    left: 30%;
+}

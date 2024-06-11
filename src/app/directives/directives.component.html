@@ -1,0 +1,58 @@
+<div class="parent">
+<h1 *ngIf="true">Hello directives!!!</h1>
+
+<p>directives works!</p>
+
+
+<p *ngfor="let age of ages">
+my age is {{age}}
+</p>
+
+<p *ngfor="let state of states let i=index">
+state {{i+1}} name is{{state}}
+</p>
+<ol type="I">
+    <li *ngfor="let state of states">{{state}}</li>
+
+</ol>
+<select name="" id="">
+    <option *ngform="let state of states">{{states}}</option>
+</select>
+<p *nfform="let product of products">
+   the {{product.name}}price is{{product.price}}and rating is{{product.rating}}
+</p>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>price</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+     <tbody>
+           <tr *ngfor="let product of products">
+             <td>{{product.name}}</td>
+             <td [ngClass]="{'red':product.price<=1000,'blue': product.price>1000&&product.price<=5000,'green':product.price>5000}">{{product.price}}</td>
+             <td [ngStyle]="{'color':product.rating>3?'green':'red'}">{{product.rating}}</td>
+          </tr>
+    </tbody>
+</table>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>company</th>
+            <th>experience</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngfor="let employee of  employees">
+         <td>{{employee.name}}</td>
+         <td>{{employee.company}}</td>
+         <td>{{employee.experience}}</td>
+         
+        </tr>
+    </tbody>
+</table>
+</div>

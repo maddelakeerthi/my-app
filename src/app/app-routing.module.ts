@@ -11,6 +11,9 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
+import { KeerthiComponent } from './keerthi/keerthi.component';
+import { TharunComponent } from './tharun/tharun.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 const routes: Routes = [
   {path:'login',component:LogingComponent},
@@ -21,7 +24,10 @@ const routes: Routes = [
         {path:'calculator',component:CalculatorComponent},
         {path:'rectangle',component:RectangleComponent},
         {path:'circle',component:CircleComponent},
-        {path:'bmi',component:BmiComponent}
+        {path:'bmi',component:BmiComponent},
+        {path:'keerthi',component:KeerthiComponent },
+        {path:'tharun',component:TharunComponent},
+        {path:'directives',component:DirectivesComponent}
 
     ]},
     {path:'',component:LogingComponent},

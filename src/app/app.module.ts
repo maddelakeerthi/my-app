@@ -16,6 +16,9 @@ import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { OperationsComponent } from './operations/operations.component';
+import { KeerthiComponent } from './keerthi/keerthi.component';
+import { TharunComponent } from './tharun/tharun.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { OperationsComponent } from './operations/operations.component';
     RectangleComponent,
     CircleComponent,
     BmiComponent,
-    OperationsComponent
+    OperationsComponent,
+    KeerthiComponent,
+    TharunComponent,
+    DirectivesComponent,
   ],
   imports: [
     BrowserModule,
