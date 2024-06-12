@@ -1,0 +1,11 @@
+.child{
+    height: 550px;
+    width: 400px;
+    background-color: rgb(254, 9, 254);
+    position: relative;
+    text-align: center;
+    left: 30%;
+}
+table{
+    margin-left: 90px;
+}

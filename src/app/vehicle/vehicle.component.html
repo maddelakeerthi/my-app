@@ -1,0 +1,69 @@
+
+<div class="parent">
+<label for="search">Search</label>
+<input type="text" id="search" [(ngModel)]="term" (keyup)="filter()">
+
+<label for="page">Page:</label>
+<select id="page" [(ngModel)]="page" (change)="pagination()">
+    <option *ngFor="let p of [1, 2, 3, 4, 5]">{{p}}</option>
+</select>
+<br>
+</div>
+<label for="column">Column:</label>
+<select id="column" [(ngModel)]="colum">
+    <option value="vehicle">Vehicle</option>
+    <option value="manufacturer">Manufacturer</option>
+    <option value="model">Model</option>
+    <option value="type">Type</option>
+    <option value="fuel">Fuel</option>
+    <option value="color">Color</option>
+    <option value="image">Image</option>
+    <option value="cost">Cost</option>
+    <option value="id">ID</option>
+</select>
+<br>
+
+<label for="order">Order:</label>
+<select id="order" [(ngModel)]="order">
+    <option value="asc">Ascending</option>
+    <option value="desc">Descending</option>
+</select>
+<br>
+
+<button (click)="sort()">Sort</button>
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Vehicle</th>
+            <th>Manufacturer</th>
+            <th>Model</th>
+            <th>Type</th>
+            <th>Fuel</th>
+            <th>Color</th>
+            <th>Image</th>
+            <th>Cost</th>
+            <th>ID</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicles; let i = index">
+            <td>{{ vehicle.vehicle }}</td>
+            <td>{{ vehicle.manufacturer }}</td>
+            <td>{{ vehicle.model }}</td>
+            <td>{{ vehicle.type }}</td>
+            <td>{{ vehicle.fuel }}</td>
+            <td>{{ vehicle.color }}</td>
+            <td>
+                <img [src]="vehicle.image" alt="Vehicle Image" width="100px" height="100px">
+            </td>
+            <td>{{ vehicle.cost }}</td>
+            <td>{{ vehicle.id }}</td>
+            <td><button class="btn btn-success"(click)="view(vehicle.id)">view</button>
+                <button class="btn btn-warning"(click)="edit(vehicle.id)">edit</button>
+                <button class="btn btn-success"(click)="delete(vehicle.id)">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

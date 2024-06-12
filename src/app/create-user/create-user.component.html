@@ -1,0 +1,113 @@
+<div class="parent">
+<p>create-user works!</p>
+<h1>create-user form!</h1>
+<form [formGroup]="userForm">
+        <label>Name:</label>
+        <input type="text" formControlName="name">
+        <br>
+        <div *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched">
+          <p class="error" *ngIf="userForm.get('name')?.errors?.['required']">Name is required</p>
+          <p class="error" *ngIf="userForm.get('name')?.errors?.['minlength']">Name should contain at least 3 characters</p>
+          <p class="error" *ngIf="userForm.get('name')?.errors?.['maxlength']">Name should contain at most 10 characters</p>
+        </div>
+      
+    <!-- <p>touched:{{userForm.get('name')?.touched}}</p>
+    <p>untouched:{{userForm.get('name')?.untouched}}</p>
+    <p>pristine:{{userForm.get('name')?.pristine}}</p>
+    <p>dirty:{{userForm.get('name')?.dirty}}</p>
+    <p>valid:{{userForm.get('name')?.valid}}</p>
+    <p>invalid:{{userForm.get('name')?.invalid}}</p> -->
+    <br>
+    <label>Age:</label>
+    <input type="text" formControlName="age">
+    <br>
+    <br>
+    <div *ngIf="userForm.get('age')?.invalid && userForm.get('age')?.touched">
+        <p class="error" *ngIf="userForm.get('age')?.errors?.['required']">age is required</p>
+        <p class="error" *ngIf="userForm.get('age')?.errors?.['minlength']">age should contain at least 1 characters</p>
+        <p class="error" *ngIf="userForm.get('age')?.errors?.['maxlength']">age should contain at least 2 digits</p>
+  
+
+      </div>
+    <label>Phone:</label>
+    <input type="text" formControlName="phone">
+    <br>
+    <br>
+    <div *ngIf="userForm.get('phone')?.invalid && userForm.get('phone')?.touched">
+        <p class="error" *ngIf="userForm.get('phone')?.errors?.['required']">Number is required</p>
+        <p class="error" *ngIf="userForm.get('phone')?.errors?.['minlength']">Number should contain 10 digits</p>
+        <p class="error" *ngIf="userForm.get('phone')?.errors?.['maxlength']">Number should contain at most 10 characters</p>
+  
+      </div>
+    <div formGroupName="address">
+        <label>H.no:</label>
+        <input type="text" formControlName="hno">
+        <br>
+        <br>
+       
+        <label>City:</label>
+        <input type="text" formControlName="city">
+        <br>
+        <br>
+       
+        <label>Pincode:</label>
+        <input type="text" formControlName="pincode">
+       
+
+    </div>
+    <br>
+    <br>
+
+    <label>Type: </label>
+    <input type="radio" name="type" formControlName="type" value="dayScholor">
+    <label>Days Scholor</label>
+    <input type="radio" name="type" formControlName="type" value="residential">
+    <label>Residential</label>
+    <br>
+    <br>
+
+    <div *ngIf="userForm.get('type')?.value=='dayScholor'">
+        <label>Bus fee:</label>
+        <input type=" text" formControlName="busfee">
+        <br>
+        <br>
+    </div>
+    
+    <div *ngIf="userForm.get('type')?.value=='residential'">
+        <label>Hostel Fee:</label>
+        <input type=" text" formControlName="hostelfee">
+        <br>
+        <br>
+        </div>
+
+    <button (click)="submit()">submit</button>
+    <button (click)="addcart()">Add Cart</button>
+    <br><br>
+    <div formArrayName="cards">
+        <div *ngFor="let card of cardsFormArray.controls;let i=index" formGroupName="{{i}}">
+            <h5>Card {{i+1}}</h5>
+            <label>Number:</label>
+            <input type="number" formControlName="number">
+            <div *ngIf="cardsFormArray.controls[i]?.get('number')?.touched && cardsFormArray.controls[i]?.get('number')?.invalid">
+                <p class="error" *ngIf="cardsFormArray.controls[i]?.get('number')?.errors?.['required']">Number is required</p>
+                <p class="error" *ngIf="cardsFormArray.controls[i]?.get('number')?.errors?.['min']">Min 12 number</p>
+                <p class="error" *ngIf="cardsFormArray.controls[i]?.get('number')?.errors?.['max']">Max 12 numbers</p>
+
+            </div>
+            <br>
+            <br>
+            <label>Expiry:</label>
+            <input type="month" formControlName="expire">
+            <br> 
+            <br>
+            <label>CVV:</label>
+            <input type="number" formControlName="cvv">
+            <br>
+            <br>
+            <button (click)="deleteCard(i)">delete</button>
+            <hr>
+            
+        </div>
+    </div>
+</form>
+

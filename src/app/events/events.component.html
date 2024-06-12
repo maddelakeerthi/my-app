@@ -1,0 +1,24 @@
+<p>events works!</p>
+<div class="parent">
+    <div class="child">
+        <h1>Event Registration</h1>
+        <label for="">Name:</label>
+        <input type="text" [(ngModel)]="name">
+        <button (click)="register()">Register</button>
+        <br>
+        <br>
+        <h1>Registered Users</h1>
+        <div>
+            <h3 *ngFor="let name of names; let i=index">
+            {{i+1}}
+            {{name}}
+            <button class="delete" (click)="delete(i)">delete</button>
+            </h3>
+        </div>
+        <button class="delete" *ngIf="names.length" (click)="deletelast()">delete last</button>
+        <button class="delete" *ngIf="names.length" (click)="deleteall()">delete all</button>
+        <button (click)="ascending()">Order_A</button>
+        <button (click)="descending()">Order_z</button>
+        <button (click)="salutation()">salutation</button>
+    </div>
+</div>

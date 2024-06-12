@@ -1,0 +1,12 @@
+.parent{
+    position: relative;
+    left: 25%;
+}
+.label{
+display: inline-block;
+margin: 10px;
+width: 100px;
+}
+p{
+    color: red;
+}

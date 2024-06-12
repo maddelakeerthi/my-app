@@ -3,8 +3,10 @@
     left: 40%;
     background-color: brown;
     margin-right: 50%;
-    height: 250px;
+    height: 260px;
+    width: 300px;
     top: 200px;
+    left: 20%;
 }
 #heading{
     text-align: center;

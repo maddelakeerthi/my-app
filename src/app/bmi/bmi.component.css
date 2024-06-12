@@ -1,9 +1,9 @@
 .parent{
     position: relative;
-    left: 40%;
     background-color: rgb(104, 105, 104);
     height: 250px;
     width: 400px;
     margin-right: 40px;
     top: 200px;
+    left: 30%;
 }

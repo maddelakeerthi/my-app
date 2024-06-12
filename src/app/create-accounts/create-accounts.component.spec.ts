@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TharunComponent } from './tharun.component';
+import { CreateAccountsComponent } from './create-accounts.component';
 
-describe('TharunComponent', () => {
-  let component: TharunComponent;
-  let fixture: ComponentFixture<TharunComponent>;
+describe('CreateAccountsComponent', () => {
+  let component: CreateAccountsComponent;
+  let fixture: ComponentFixture<CreateAccountsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TharunComponent ]
+      declarations: [ CreateAccountsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TharunComponent);
+    fixture = TestBed.createComponent(CreateAccountsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

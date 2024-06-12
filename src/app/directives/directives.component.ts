@@ -17,7 +17,7 @@ export class DirectivesComponent implements OnInit {
     {name:'laptop', price:50000, rating:2},
     
   ]
-  public employees:any=[
+  public companies:any=[
     {name:'a',company:"Tcs",exp:'3'},
     {name:'b',company:"wipro",exp:'4'},
     {name:'c',company:"capgemini",exp:'5'}
