@@ -1,0 +1,7 @@
+.child{
+    height: 120px;
+    width: 335px;
+    background-color: rgb(195, 36, 68);
+    position: relative;
+    left: 20px;
+}

@@ -1,0 +1,24 @@
+.parent{
+    position: relative;
+    left: 10%;
+    width: auto;
+}
+.child{
+    display:flex;
+    justify-content: space-evenly;
+}
+.left{
+    background-color:rgb(122, 244, 122);
+    height: 600px;
+    width: 380px;
+}
+.middle{
+    background-color: rgb(225, 179, 11);
+    height: 600px;
+    width: 380px;
+}
+.right{
+    background-color: rgb(214, 83, 201);
+    height: 600px;
+    width: 380px;
+}

@@ -1,0 +1,16 @@
+<p>calculators works!</p>
+<div class="parent">
+    <h1>Calculator</h1>
+    <div class="top">
+        <label>num1:</label>
+        <input type="number" placeholder="01" [(ngModel)]="num1">
+        <br>
+        <label>num2:</label>
+        <input type="number" placeholder="02" [(ngModel)]="num2">
+        <br>
+        <br>
+    </div>
+    <div class="bottom">
+        <app-operator [num1]="num1" [num2]="num2" (clear)="catch($event)"></app-operator>
+    </div>
+</div>

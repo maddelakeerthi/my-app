@@ -1,0 +1,7 @@
+<p>child2 works!</p>
+<div class="child" *ngFor="let child of child2; let i=index">
+  <h5><strong>Task: </strong><small>{{child.task}}</small></h5>
+  <h5><strong>Date: </strong><small>{{child.date | date:'MMM d, y, h:mm a'}}</small></h5>
+  <button class="btn btn-success" (click)="view(i)">View</button>
+  <button (click)="delete(i)">Delete</button>
+</div>

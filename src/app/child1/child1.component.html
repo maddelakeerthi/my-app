@@ -1,0 +1,15 @@
+<p>child1 works!</p>
+<form [formGroup]="childForm">
+    <label>Task:</label>
+    <textarea  formControlName="task"></textarea>
+    <br>
+    <label>Date:</label>
+    <input formControlName="date" type="datetime-local">
+    <br>
+<button (click)="create()"  type="button" class="btn btn-success">create</button>
+<button (click)="submit()"  type="button" class="btn btn-success">submit</button>
+
+
+
+</form>
+
